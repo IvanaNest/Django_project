@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Restaurant Matching</title>
+
+    <link rel="stylesheet" href="{% static 'myapp/css/styles.css' %}">
+
+    <style>
+        /* Add inline styles here if necessary */
+    </style>
+</head>
+<body>
+    <header class="banner">
+        <div class="profile-icon" onclick="openSettingsPage()">
+            <img src="{% static 'myapp/images/profile.png' %}" alt="Profile">
+        </div>        
+        <h1>Discover Your Perfect Restaurant Match</h1>
+</header>
+
+    <main>
+        <div class="tab-container">
+            <button class="tab" onclick="openTab(event, 'matching')">Match with Restaurants</button>
+            <button class="tab" onclick="openTab(event, 'matched')">Matched Restaurants</button>
+        </div>
+
+        <div id="matching" class="tab-content">
+            <h2>Match with Restaurants</h2>
+            <p>Find restaurants that match your preferences</p>
+            <button>Start Matching</button>
+        </div>
+
+        <div id="matched" class="tab-content">
+            <h2>Matched Restaurants</h2>
+            <p>View restaurants you've matched with</p>
+            <button>View Matches</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Restaurant Matching</p>
+    </footer>
+    <script src="{% static 'myapp/js/script.js' %}"></script>
+
+</body>
+</html>
